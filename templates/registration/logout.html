@@ -1,0 +1,10 @@
+{%extends 'base.html'%}
+{%block content%}
+<h1>Log Out</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, esse.</p>
+<form action="" method="post">
+    {%csrf_token%}
+    {{form.as_p}}
+    <input type="submit" value="Logout">
+</form>
+{%endblock content%}
