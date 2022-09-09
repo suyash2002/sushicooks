@@ -1,10 +1,16 @@
 {%extends 'base.html'%}
 {%block content%}
-<h1>Recipes</h1>
+<center><h1 class="font-yeseva">Recipes</h1>
+    <div class="hero-flex">
 {% for recipe in object_list %}
-<div>
-<h2><a href="{%url 'recipe_detail' recipe.pk%}">{{ recipe.title }}</a></h2>
-<p>{{ recipe.body }}</p>
+<div class="drop-box">
+<h2>{{ recipe.title }}</h2>
+<p>{{ recipe.body|slice:"20"}}...</p>
+<a href="{%url 'recipe_detail' recipe.pk%}"style="color:white">Read More</a>
 </div>
+
+
 {% endfor %}
+</div>
+</center>
 {%endblock content%}
