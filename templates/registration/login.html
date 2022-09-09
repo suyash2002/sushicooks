@@ -1,10 +1,12 @@
 {%extends 'base.html'%}
 {%block content%}
-<h1>Log In</h1>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, esse.</p>
-<form action="" method="post">
+
+
+<center><h1 class="font-yeseva">Log In</h1>
+<p style="margin-bottom: 10px;">Login your details and immerse yourself in the food realm</p></center>
+<form action="" class="center drop-box"method="post">
     {%csrf_token%}
     {{form.as_p}}
-    <input type="submit" value="Login">
+    <center><input type="submit" style="margin-top: 10px;" value="Login"></center>
 </form>
 {%endblock content%}

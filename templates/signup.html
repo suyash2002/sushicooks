@@ -1,0 +1,12 @@
+{%extends 'base.html'%}
+{%block content%}
+
+<center><h1 class="font-yeseva">Sign Up</h1>
+<p style="margin-bottom: 10px;">New here? Well sign up now as voyage to food realm has begun.</p>
+</center>
+<form action=""class="center drop-box "style="padding: 2rem;width:60%" method="post">
+    {%csrf_token%}
+    {{form.as_p}}
+   <center> <input type="submit"  style="margin-top: 10px;"value="Sign Up"></center>
+</form>
+{%endblock content%}

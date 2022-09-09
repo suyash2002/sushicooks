@@ -258,20 +258,3 @@ footer a{
      width:17rem;
     }
   }
-  form{
-
-    padding:20px;
-}
-.center{
-    margin:auto;
-margin-bottom: 20px;
-padding: 10px
-}
-label{
-    display:flex;
-}
-input,textarea{
-    padding:10px;
-    border:none;
-    border-radius:10px;
-}

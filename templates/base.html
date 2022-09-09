@@ -5,11 +5,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sushi Cooks</title>
     <link rel="stylesheet" href="{%static 'css/base.css'%}">
-    <title>Document</title>
+    <link rel="shortcut icon" href="{%static 'images/favicon.png'%}" type="image/x-icon">
 </head>
+<body>
+  <!-- NAVBAR   -->
+  <header class="mb-10">
+    <div class="logo">
+      <h1 class="font-yeseva">sushi cooks</h1>
+    </div>
+    <nav>
+      <div class="menu-close">
+        <div class="bar-close"></div>
+        <div class="bar-close"></div>
+      </div>
+      <ul class="nav-list">
+        {%if user.is_authenticated%}
+        <li class="nav-item  drop-box"><a class="nav-link " href="{%url 'recipes_home'%}">Recipes</a></li>
+        <li class="nav-item drop-box"><a class="nav-link " href="{%url 'recipe_new'%}">Share</a></li>
+        <li class="nav-item drop-box"><a class="nav-link " href="{%url 'logout'%}">Logout</a></li>
+        {%else%}
+        <li class="nav-item  drop-box"><a class="nav-link " href="{%url 'login'%}">Login</a></li>
+        <li class="nav-item drop-box"><a class="nav-link " href="{%url 'signup'%}">Sign Up</a></li>
+        {%endif%}
+    </ul>
+
+    </nav>
+    <div class="menu-open">
+      <div class="bar-open"></div>
+      <div class="bar-open"></div>
+      <div class="bar-open"></div>
+    </div>
+  </header>
 <body>
     {%block content%}
     {%endblock content%}
 </body>
+<footer>
+    <center>
+    <div class="footer"style="background-color:#FFC671">
+        <img class="footer-png"src="{%static 'images/footer.png'%}" alt="footer illustration" height="150px">
+        <h1 class="font-italiana footer-txt">Embracing cultures, embracing cuisines</h1>
+        <a class="link footer-txt"href="mailto:suyashbarwal@gmail.com" style="color:white">suyashbarwal@gmail.com</a>
+    </div>
+  </center>
+  </footer>
+  </body>
+  <script src="{%static 'js/index.js'%}"></script>
 </html>
