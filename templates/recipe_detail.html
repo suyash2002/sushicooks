@@ -3,7 +3,13 @@
 <center>
 <div class="center drop-box">
     <h2>{{ recipe.title }}</h2>
-    <p>{{ recipe.body }}</p>
+    <p>{{ recipe.ingredients}}</p>
+    <p>{{ recipe.description}}</p>
+    {% if recipe.image %}
+    <img src="{{recipe.image.url}}" height="300px" alt="">
+    {%endif%}
+    <p>{{recipe.steps}}</p>
+
 </div>
 </center>
 {% ifequal recipe.author user %}

@@ -1,3 +1,4 @@
+from django.shortcuts import render
 from django.views.generic import ListView,DetailView
 from django.views.generic.edit import CreateView,UpdateView,DeleteView
 from recipes.models import Recipe
@@ -18,11 +19,14 @@ class RecipeCreateView(CreateView):
 class RecipeUpdateView(UpdateView):
       model=Recipe
       template_name='recipe_edit.html'
-      fields=['title','body']
+      fields=['title','description','steps','ingredients',]
 
 class RecipeDeleteView(DeleteView):
       model=Recipe
       template_name='recipe_delete.html'
       success_url=reverse_lazy('home')
-    
-           
+
+def SearchView(request):
+      return render(request,
+                    'search.html',
+                    {})

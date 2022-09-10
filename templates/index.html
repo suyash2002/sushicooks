@@ -5,11 +5,9 @@
 {% for recipe in object_list %}
 <div class="drop-box">
 <h2>{{ recipe.title }}</h2>
-<p>{{ recipe.body|slice:"20"}}...</p>
+<p>{{ recipe.description|slice:"20"}}...</p>
 <a href="{%url 'recipe_detail' recipe.pk%}"style="color:white">Read More</a>
 </div>
-
-
 {% endfor %}
 </div>
 </center>

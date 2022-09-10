@@ -4,7 +4,7 @@
 
 
 <center><h1 class="center font-yeseva">New Recipe</h1></center>
-<form action="" class="center drop-box"method="post">{% csrf_token %}
+<form action="" class="center drop-box"method="post"enctype="multipart/form-data">{% csrf_token %}
     {{ form.as_p }}
     <input type="submit" value="Save" />
 </form>

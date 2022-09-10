@@ -30,13 +30,20 @@
         <li class="nav-item drop-box"><a class="nav-link " href="{%url 'signup'%}">Sign Up</a></li>
         {%endif%}
     </ul>
-
+<form action="" method="get" action="{%url 'search'%}">
+  {%csrf_token%}
+  <input type="search"placeholder="Search",aria-label="Search">
+  <button type="submit">
+    Search
+  </button>
+</form>
     </nav>
     <div class="menu-open">
       <div class="bar-open"></div>
       <div class="bar-open"></div>
       <div class="bar-open"></div>
     </div>
+    
   </header>
 <body>
     {%block content%}

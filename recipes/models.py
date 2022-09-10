@@ -7,7 +7,10 @@ class Recipe(models.Model):
         'users.CustomUser',
         on_delete=models.CASCADE,
     )
-    body=models.TextField()
+    description=models.TextField()
+    image=models.ImageField(upload_to='images/',null=True,blank=True)
+    ingredients=models.TextField( null=True, blank=True)
+    steps=models.TextField( null=True, blank=True) 
     def __str__(self):
         return self.title
     def get_absolute_url(self):
