@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sushi Cooks</title>
+    <title>sushi cooks</title>
     <link rel="stylesheet" href="{%static 'css/base.css'%}">
     <link rel="shortcut icon" href="{%static 'images/favicon.png'%}" type="image/x-icon">
 </head>
@@ -22,21 +22,14 @@
       </div>
       <ul class="nav-list">
         {%if user.is_authenticated%}
-        <li class="nav-item  drop-box"><a class="nav-link " href="{%url 'recipes_home'%}">Recipes</a></li>
-        <li class="nav-item drop-box"><a class="nav-link " href="{%url 'recipe_new'%}">Share</a></li>
-        <li class="nav-item drop-box"><a class="nav-link " href="{%url 'logout'%}">Logout</a></li>
+        <li class="nav-item  "><a class="nav-link " href="{%url 'recipes_home'%}">Recipes</a></li>
+        <li class="nav-item "><a class="nav-link " href="{%url 'recipe_new'%}">Share</a></li>
+        <li class="nav-item "><a class="nav-link " href="{%url 'logout'%}">Logout</a></li>
         {%else%}
         <li class="nav-item  drop-box"><a class="nav-link " href="{%url 'login'%}">Login</a></li>
         <li class="nav-item drop-box"><a class="nav-link " href="{%url 'signup'%}">Sign Up</a></li>
         {%endif%}
     </ul>
-<form action="" method="get" action="{%url 'search'%}">
-  {%csrf_token%}
-  <input type="search"placeholder="Search",aria-label="Search">
-  <button type="submit">
-    Search
-  </button>
-</form>
     </nav>
     <div class="menu-open">
       <div class="bar-open"></div>
